@@ -50,6 +50,7 @@ class Chef
           if a == :start && new_resource.service_name == 'clamd'
             execute 'Ensure virus definitions exist so clamd can start' do
               command 'freshclam'
+              timeout 300
               creates ::File.join(clamav_data_dir, 'main.cvd')
             end
           end
