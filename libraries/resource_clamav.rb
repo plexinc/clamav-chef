@@ -54,7 +54,7 @@ class Chef
       #
       # Optionally install a specific version of the ClamAV packages.
       #
-      property :version, [String, nil], default: nil
+      property :version, String, default: "latest"
 
       #
       # Optionally install the dev in addition to base packages.
